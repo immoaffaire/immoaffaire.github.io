@@ -15,7 +15,7 @@
         font-family: Arial, sans-serif;
     }
     img.logo {
-        width: 180px; /* ⬅️ عدّل حجم الشعار حسب الحاجة */
+        width: 180px; /* حجم الشعار */
         margin-bottom: 20px;
     }
     h1 {
@@ -39,7 +39,7 @@
     .btn:hover { background: #005fa3; }
 </style>
 <script>
-    let countdown = 5; // ⬅️ مدة الانتظار بالثواني
+    let countdown = 5; // مدة الانتظار بالثواني
     function startTimer(){
         const counter = document.getElementById('counter');
         const interval = setInterval(() => {
@@ -47,7 +47,7 @@
             counter.textContent = countdown;
             if(countdown <= 0){
                 clearInterval(interval);
-                window.location.href = "https://sites.google.com/view/immoaffaire/accueil"; // ⬅️ رابط التحويل
+                window.location.href = "https://sites.google.com/view/immoaffaire/accueil"; // رابط التحويل
             }
         }, 1000);
     }
@@ -55,9 +55,9 @@
 </script>
 </head>
 <body>
-    <!-- شعارك هنا -->
-    <img src="https://drive.google.com/file/d/1iO5uo25X3mFjN8X4Ll3ioXFXeNjI0Azk/view?usp=drive_link" alt="Logo" class="logo">
-    
+    <!-- شعارك -->
+    <img src="https://drive.google.com/uc?export=view&id=1iO5uo25X3mFjN8X4Ll3ioXFXeNjI0Azk" alt="Logo" class="logo">
+
     <h1>جارٍ تحويلك إلى الموقع...</h1>
     <p>سيتم نقلك خلال <span id="counter">5</span> ثوانٍ</p>
     <a class="btn" href="https://sites.google.com/view/immoaffaire/accueil">انتقل الآن</a>
