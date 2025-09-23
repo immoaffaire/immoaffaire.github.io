@@ -1,63 +1,65 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>جاري تحويلك…</title>
-
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirection en cours...</title>
+<style>
     body {
-      background: linear-gradient(135deg, #1abc9c, #16a085);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
-      text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background: #f0f0f0;
+        font-family: Arial, sans-serif;
     }
-    .container {
-      background: rgba(0,0,0,0.25);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      animation: fadeIn 1s ease;
+    img.logo {
+        width: 180px; /* ⬅️ عدّل حجم الشعار حسب الحاجة */
+        margin-bottom: 20px;
     }
     h1 {
-      margin-bottom: 10px;
-      font-size: 28px;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
     }
     p {
-      margin: 10px 0 20px;
-      font-size: 18px;
+        color: #666;
+        margin-bottom: 20px;
     }
-    a.button {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #ffffff;
-      color: #16a085;
-      font-weight: bold;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: 0.3s;
+    .btn {
+        padding: 12px 25px;
+        background: #0077cc;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.3s;
     }
-    a.button:hover {
-      background: #f1f1f1;
+    .btn:hover { background: #005fa3; }
+</style>
+<script>
+    let countdown = 5; // ⬅️ مدة الانتظار بالثواني
+    function startTimer(){
+        const counter = document.getElementById('counter');
+        const interval = setInterval(() => {
+            countdown--;
+            counter.textContent = countdown;
+            if(countdown <= 0){
+                clearInterval(interval);
+                window.location.href = "https://sites.google.com/view/immoaffaire/accueil"; // ⬅️ رابط التحويل
+            }
+        }, 1000);
     }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-  </style>
-  
-  <!-- التحويل التلقائي بعد 3 ثوان -->
-  <meta http-equiv="refresh" content="3; url="https://sites.google.com/view/immoaffaire/accueil">
+    window.onload = startTimer;
+</script>
 </head>
 <body>
-  <div class="container">
-    <h1>مرحباً بك 👋</h1>
-    <p>جاري تحويلك إلى موقعنا الرسمي خلال ثوانٍ…</p>
-    <a href="https://sites.google.com/view/immoaffaire/accueil" class="button">انتقل الآن</a>
-  </div>
+    <!-- شعارك هنا -->
+    <img src="https://drive.google.com/file/d/1iO5uo25X3mFjN8X4Ll3ioXFXeNjI0Azk/view?usp=drive_link" alt="Logo" class="logo">
+    
+    <h1>جارٍ تحويلك إلى الموقع...</h1>
+    <p>سيتم نقلك خلال <span id="counter">5</span> ثوانٍ</p>
+    <a class="btn" href="https://sites.google.com/view/immoaffaire/accueil">انتقل الآن</a>
 </body>
 </html>
