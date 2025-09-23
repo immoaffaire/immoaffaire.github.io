@@ -1,65 +1,66 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirection en cours...</title>
-<style>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="5; url=https://sites.google.com/view/immoaffaire/accueil" />
+  <title>ImmoAffaire</title>
+  <style>
+    /* 🌈 خلفية بتدرّج لوني أنيق */
     body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100vh;
-        background: #f0f0f0;
-        font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      font-family: 'Cairo', sans-serif;
+      color: #fff;
+      text-align: center;
     }
-    img.logo {
-        width: 180px; /* حجم الشعار */
-        margin-bottom: 20px;
+
+    .container {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
     }
+
     h1 {
-        font-size: 24px;
-        color: #333;
-        margin-bottom: 10px;
+      font-size: 28px;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
     }
+
     p {
-        color: #666;
-        margin-bottom: 20px;
+      font-size: 18px;
+      margin-bottom: 25px;
+      line-height: 1.8;
     }
-    .btn {
-        padding: 12px 25px;
-        background: #0077cc;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: bold;
-        transition: background 0.3s;
+
+    a.btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #ff9800;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
-    .btn:hover { background: #005fa3; }
-</style>
-<script>
-    let countdown = 5; // مدة الانتظار بالثواني
-    function startTimer(){
-        const counter = document.getElementById('counter');
-        const interval = setInterval(() => {
-            countdown--;
-            counter.textContent = countdown;
-            if(countdown <= 0){
-                clearInterval(interval);
-                window.location.href = "https://sites.google.com/view/immoaffaire/accueil"; // رابط التحويل
-            }
-        }, 1000);
+
+    a.btn:hover {
+      background: #e68900;
     }
-    window.onload = startTimer;
-</script>
+  </style>
 </head>
 <body>
-    <!-- شعارك -->
-    <img src="https://drive.google.com/uc?export=view&id=1iO5uo25X3mFjN8X4Ll3ioXFXeNjI0Azk" alt="Logo" class="logo">
-
-    <h1>جارٍ تحويلك إلى الموقع...</h1>
-    <p>سيتم نقلك خلال <span id="counter">5</span> ثوانٍ</p>
+  <div class="container">
+    <h1>مرحباً بك في ImmoAffaire</h1>
+    <p>سيتم تحويلك تلقائيًا إلى موقعنا خلال 5 ثوانٍ.<br>
+       إذا لم يتم التحويل، يمكنك النقر أدناه.</p>
     <a class="btn" href="https://sites.google.com/view/immoaffaire/accueil">انتقل الآن</a>
+  </div>
 </body>
 </html>
