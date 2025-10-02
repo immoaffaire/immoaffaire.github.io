@@ -2,10 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="8; url=https://sites.google.com/view/immoaffaire/accueil" />
+  <meta http-equiv="refresh" content="5; url=https://sites.google.com/view/immoaffaire/accueil" />
   <title>ImmoAffaire</title>
   <style>
-    /* 🌈 خلفية بتدرّج لوني أنيق */
     body {
       margin: 0;
       padding: 0;
@@ -21,14 +20,15 @@
 
     .container {
       background: rgba(0, 0, 0, 0.4);
-      padding: 40px 30px;
+      padding: 30px 20px;
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      max-width: 400px;
+      width: 90%;
+      max-width: 420px; /* زودت الحد الأقصى ليتناسب مع الهاتف */
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 26px;
       margin-bottom: 15px;
       letter-spacing: 1px;
     }
@@ -41,25 +41,37 @@
 
     a.btn {
       display: inline-block;
-      padding: 12px 25px;
+      padding: 14px 30px;
       background: #ff9800;
       color: #fff;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
+      font-size: 18px;
       transition: background 0.3s ease;
     }
 
     a.btn:hover {
       background: #e68900;
     }
+
+    /* تكبير النصوص والبطاقة على الهاتف */
+    @media (max-width: 600px) {
+      .container {
+        max-width: 95%;
+        padding: 35px 20px;
+      }
+      h1 { font-size: 24px; }
+      p { font-size: 16px; }
+      a.btn { font-size: 16px; padding: 12px 25px; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>مرحباً بك في ImmoAffaire</h1>
-    <p>ImmoAffaire – عقارات الجزائر | بيع و شراء.<br>
-       وجهتك الافضل لعروض استثنائية و الاستشارات العقارية.</p>
+    <p>ImmoAffaire – عقارات الجزائر، بيع و شراء.<br>
+       وجهتك الأفضل لعروض استثنائية و الاستثمارات العقارية.</p>
     <a class="btn" href="https://sites.google.com/view/immoaffaire/accueil">ImmoAffaire</a>
   </div>
 </body>
